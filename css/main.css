@@ -1,0 +1,27 @@
+.kanban{
+    display: flex;
+    padding: 30px;
+    width: 750px;
+    background: lightpink;
+    border-radius: 5px;
+}
+.kanban * {
+    font-family: sans-serif;
+}
+
+.kanban__column{
+    flex: 1;
+}
+/* Targeting all the columns except the last one */
+.kanban__column:not(:last-child){
+    margin-right: 30px;
+}
+
+/* user-select none prevents the user from selecting something by accident (column titles). 
+This is how people make it so you can't copy and paste things */
+.kanban__column-title{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white;
+    user-select: none;
+}
